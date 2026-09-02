@@ -136,4 +136,11 @@ SELECT *
 FROM issued_status
 WHERE issued_emp_id ='E101';
 
---Q5
+--Q5 List Members Who Have Issued More Than One Book 
+SELECT COUNT(*),issued_member_id
+FROM issued_status
+GROUP BY 2
+HAVING COUNT(*)>1;
+
+--
+
