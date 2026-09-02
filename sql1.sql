@@ -107,3 +107,5 @@ CREATE TABLE return_status(
     FOREIGN KEY (return_book_isbn)
         REFERENCES books(isbn)
 );
+
+INSERT INTO BOOKS VALUES('978-1-60129-456-2', 'To Kill a MockingBird', 'Classic', 6.00, 'yes', 'Harper Lee', 'J.B. Lippincott & Co.');
