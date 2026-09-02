@@ -108,4 +108,32 @@ CREATE TABLE return_status(
         REFERENCES books(isbn)
 );
 
+-- Q1 
 INSERT INTO BOOKS VALUES('978-1-60129-456-2', 'To Kill a MockingBird', 'Classic', 6.00, 'yes', 'Harper Lee', 'J.B. Lippincott & Co.');
+
+--Q2
+SELECT *
+FROM MEMBERS;
+
+UPDATE MEMBERS 
+SET member_address = '124 Main St'
+WHERE member_id='C101';
+
+--Q3
+SELECT * 
+FROM issued_status;
+
+DELETE 
+FROM issued_status
+WHERE issued_id='IS104';
+
+
+--Q4
+SELECT *
+FROM issued_status;
+
+SELECT *
+FROM issued_status
+WHERE issued_emp_id ='E101';
+
+--Q5
