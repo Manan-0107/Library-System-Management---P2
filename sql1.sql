@@ -142,5 +142,14 @@ FROM issued_status
 GROUP BY 2
 HAVING COUNT(*)>1;
 
+--Q6 Create Summary Tables:
+CREATE TABLE book_issued_count AS (
+SELECT a.isbn,a.book_title,COUNT(i.issued_id) AS total_issued_book
+FROM issued_status i
+JOIN books a
+ON i.issued_book_isbn=a.isbn
+GROUP BY 1,2);
+)
+
 --
 
