@@ -46,7 +46,7 @@ CREATE TABLE employees(
 
 CREATE TABLE books(
     isbn VARCHAR(50) PRIMARY KEY,
-    book_title VARCHAR(50),
+    book_title VARCHAR(75),
     category VARCHAR(20),
     rental_price FLOAT,
     status VARCHAR(5),
