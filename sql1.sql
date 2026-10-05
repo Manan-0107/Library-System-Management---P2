@@ -151,5 +151,21 @@ ON i.issued_book_isbn=a.isbn
 GROUP BY 1,2);
 )
 
---
+--Q7 Retrieve all books in a Specific Category
+SELECT *
+FROM Books 
+WHERE category='Classic' 
 
+--Q8 Find total Rental income and total books by category
+
+SELECT b.category,
+SUM(rental_price) _total_rental_price,
+count(*) Total_books
+FROM Books b
+INNER JOIN issued_status i
+ON b.isbn=i.issued_book_isbn
+GROUP BY b.category
+
+
+
+--Q8
